@@ -16,7 +16,11 @@ export function TaskList() {
   const [newTaskTitle, setNewTaskTitle] = useState("");
 
   function handleCreateNewTask() {
-    setTasks([...tasks, { id: uuidv4() , title: newTaskTitle, isComplete: false }]);
+    if(newTaskTitle === ''){
+      return;
+    } else {
+      setTasks([...tasks, { id: uuidv4() , title: newTaskTitle, isComplete: false }]);
+    }
   }
 
   function handleToggleTaskCompletion(id: string) {
