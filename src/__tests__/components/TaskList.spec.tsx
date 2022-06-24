@@ -45,7 +45,7 @@ describe('App Page', () => {
 
     fireEvent.click(addTaskButton);
 
-    expect(screen.queryByTestId('task')).not.toBeInTheDocument();
+    expect(screen.queryByTestId('tasks')).not.toBeInTheDocument();
 
     const taskInput = screen.getByPlaceholderText('Adicionar novo todo');
 
